@@ -26,10 +26,15 @@ function pigLatin(word) {
 
 // Create the sentenceToPigLatin function that takes a sentence as a parameter
 	//Loops through all the words in the sentence and transforms each word
-	//It should return a transfromed sentanc
+	//It should return a transfromed sentence
 function sentenceToPigLatin(sentence){
 	var words = sentence.split(' ');
+    
 
+	
+	for (var a = 0; a < words.length; a++){
+		words[a] = pigLatin(words[a])
+	}	
 	return words; 
 }
-console.log(sentenceToPigLatin("I am here."));
+console.log(sentenceToPigLatin("I am here okay right"));

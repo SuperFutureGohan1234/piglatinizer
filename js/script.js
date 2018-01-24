@@ -11,7 +11,6 @@ $( document ).ready(function() {
 	$("#submit").click(function(){
 	console.log('the button was clicked!');
       var sentence = $('#input1').val();
-      console.log('the sentence is ' + sentence);
       var transformedSentence = sentenceToPigLatin(sentence);
       console.log(transformedSentence);
         $('#display').text(transformedSentence);
@@ -27,7 +26,32 @@ $( document ).ready(function() {
 
 function pigLatin(word) {
 	return word + "ay"
+	if(arrayOfVowels.indexOf(words[a][0]) > -1) {
+			words[a] = pigLatin(words[a])
+		} else {
+			words[a] = pigLatin2(words[a]);		
+		}
+	
 };
+
+
+function pigLatin2(word) {
+	// to do: strip the first letter from the word, and append it to "ay" at the end
+	var firstLetter = word.substr() // this line is unfinished
+	
+	if (word[0]==="a" || word[0]==="e" || word==="i" || word==="o" || word==="u" ) (8){
+		
+	} else {
+		
+	}
+	var suffix = firstLetter + 'ay';
+	
+}	
+
+
+
+
+
 
 
 
@@ -37,11 +61,16 @@ function pigLatin(word) {
 	//It should return a transfromed sentence
 function sentenceToPigLatin(sentence){
 	var words = sentence.split(' ');
-    
 
 	
 	for (var a = 0; a < words.length; a++){
-		words[a] = pigLatin(words[a])
+		// if it starts with a , do this
+		if(arrayOfVowels.indexOf(words[a][0]) > -1) {
+			words[a] = pigLatin(words[a])
+		} else {
+			words[a] = pigLatin2(words[a]);		
+		}
+		
 	}	
 	return words;
 	

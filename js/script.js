@@ -9,8 +9,16 @@
 $( document ).ready(function() {
   
 	$("#submit").click(function(){
-      sentenceToPigLatin();
+	console.log('the button was clicked!');
+      var sentence = $('#input1').val();
+      console.log('the sentence is ' + sentence);
+      var transformedSentence = sentenceToPigLatin(sentence);
+      console.log(transformedSentence);
+        $('#display').text(transformedSentence);
+      
+      
 	});
+	
 	
 });
 
@@ -35,6 +43,7 @@ function sentenceToPigLatin(sentence){
 	for (var a = 0; a < words.length; a++){
 		words[a] = pigLatin(words[a])
 	}	
-	return words; 
+	return words;
+	
 }
 console.log(sentenceToPigLatin("I am here okay right"));

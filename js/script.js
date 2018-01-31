@@ -39,15 +39,17 @@ function pigLatin2(word) {
 	// to do: strip the first letter from the word, and append it to "ay" at the end
 	var firstLetter = word.substr() // this line is unfinished
 	
-	if (word[0]==="a" || word[0]==="e" || word==="i" || word==="o" || word==="u" ) (8){
+	if (word[0]==="a" || word[0]==="e" || word==="i" || word==="o" || word==="u" ){
+		
+		return word +"ay";
 		
 	} else {
 		
-	}
-	var suffix = firstLetter + 'ay';
+		return word.slice + 'ay';
 	
-}	
+		}
 
+}	
 
 
 

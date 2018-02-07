@@ -11,7 +11,7 @@ $( document ).ready(function() {
 	$("#submit").click(function(){
 	console.log('the button was clicked!');
       var sentence = $('#input1').val();
-      var transformedSentence = sentenceToPigLatin(sentence);
+      var transformedSentence = pigLatin2(sentence);
       console.log(transformedSentence);
         $('#display').text(transformedSentence);
       
@@ -37,21 +37,23 @@ function pigLatin(word) {
 
 function pigLatin2(word) {
 	// to do: strip the first letter from the word, and append it to "ay" at the end
-	var firstLetter = word.substr() // this line is unfinished
+	var firstLetter = word[0];
 	
-	if (word[0]==="a" || word[0]==="e" || word==="i" || word==="o" || word==="u" ){
+	if (firstLetter==="a" || firstLetter==="e" || firstLetter==="i" || firstLetter==="o" || firstLetter==="u" ){
 		
 		return word +"ay";
 		
 	} else {
 		
-		return word.slice + 'ay';
+		var ending = word.slice(0,1) + 'ay';
+		var leftover = word.slice(1,word.length)
+		return leftover + ending; 
 	
-		}
+	}
 
 }	
 
-
+var array 
 
 
 
